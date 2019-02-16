@@ -2,96 +2,109 @@
     "base":[
         {
             "tipo": "Sneaker",
-            "precio": "Lps. 1000.0",
+            "precio": 1000.0,
             "marca": "Nike",
             "imglink": "https://chemasport.es/7872-big_default/zapatillas-nike-md-runner-2-baby-azulnaranja.jpg",
-            "genero": "Kids"
+            "genero": "Kids",
+            "id": 1
         },
         {
             "tipo": "Sneaker",
-            "precio": "Lps. 1000.0",
+            "precio": 1000.0,
             "marca": "Nike",
             "imglink": "https://www.izapatillas.com/14972-large_default/nike-tanjun-negras-y-rosas-zapatillas-nina-818386-061.jpg",
-            "genero": "Kids"
+            "genero": "Kids",
+            "id": 2
         }
         ,
         {
             "tipo": "Sneaker",
-            "precio": "Lps. 980.0",
+            "precio":980,
             "marca": "Nike",
             "imglink": "https://ae01.alicdn.com/kf/HTB1LoOVgIjI8KJjSsppq6xbyVXaT/PUMA-Bao-Summer-New-Air-Mesh-Boy-Kids-Sneakers-Slip-On-Lightweight-Comfortable-Sport-Running-Shoes.jpg_640x640.jpg",
-            "genero": "Kids"
+            "genero": "Kids",
+            "id": 3
         },
         {
             "tipo": "Sneaker",
-            "precio": "Lps. 1900.0",
+            "precio": 1900.0,
             "marca": "Adidas",
             "imglink": "https://http2.mlstatic.com/D_NP_665064-MLU28156587142_092018-Q.jpg",
-            "genero": "Hombre"
+            "genero": "Hombre",
+            "id": 4
         },
         {
             "tipo": "Sneaker",
-            "precio": "Lps. 2600.0",
+            "precio": 2600.0,
             "marca": "Nike",
             "imglink": "https://sporting.vteximg.com.br/arquivos/ids/170145-1000-1000/4805941_-300-_1.jpg?v=636576682630500000",
-            "genero": "Hombre"
+            "genero": "Hombre",
+            "id": 5
         },
         {
             "tipo": "Sneaker",
-            "precio": "Lps. 3000.0",
+            "precio": 3000,
             "marca": "Puma",
             "imglink": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201811/05/00166969608984____1__640x640.jpg",
-            "genero": "Hombre"
+            "genero": "Hombre",
+            "id": 6
         },
 
         {
             "tipo": "Chancla",
-            "precio": "Lps. 499.0",
+            "precio": 499,
             "marca": "Montego Bay Club",
             "imglink": "https://i.pinimg.com/originals/00/f0/0f/00f00f4b02d70460f4b60e5ce57f0731.jpg",
-            "genero": "Mujer"
+            "genero": "Mujer",
+            "id": 7
         },
         {
             "tipo": "Chancla",
-            "precio": "Lps. 5,000.0",
+            "precio": 5000,
             "marca": "Maicol Kors",
             "imglink": "http://www.susmaletas.com/blog/wp-content/uploads/2014/04/PLATE-THONG-GOLD.jpg",
-            "genero": "Mujer"
+            "genero": "Mujer",
+            "id": 8
         },
         {
             "tipo": "Chancla",
-            "precio": "Lps. 999.0",
+            "precio": 999.0,
             "marca": "Tommy Hilfiger",
             "imglink": "http://www.esmodaonline.es/images/large/products2/Comprar%20Exquisito%20Sandalias%20Tommy%20Hilfiger%20Mujer%20-%20Mela%201a%20-%20Marr%C3%B3n%20Barata%20Ventaja%201078_LRG.jpg",
-            "genero": "Mujer"
+            "genero": "Mujer",
+            "id": 9
         },
         {
             "tipo": "Casual",
-            "precio": "Lps. 1250.0",
+            "precio": 1250.0,
             "marca": "Puma",
             "imglink": "https://www.dressinn.com/f/13635/136355893/puma-vikky-platform.jpg",
-            "genero": "Mujer"
+            "genero": "Mujer",
+            "id": 10
         },
         {
             "tipo": "Sneaker",
-            "precio": "Lps. 1900.0",
+            "precio": 1900,
             "marca": "Nike",
             "imglink": "http://www.alejandraperez.es/images/NikeZapatosDeportivos/Nueva-Llegada-Nike-Air-Max-Thea-Mujer-Zapatillas-Deportivos-LO5036.jpg",
-            "genero": "Mujer"
+            "genero": "Mujer",
+            "id": 11
         },
         {
             "tipo": "Sneaker",
-            "precio": "Lps. 2250.0",
+            "precio": 2250,
             "marca": "Adidas",
             "imglink": "http://www.gomerarural.es/images/gomerarural/Elegante-Adidas-NMD-Mujer-XJZ118.jpg",
-            "genero": "Mujer"
+            "genero": "Mujer",
+            "id": 12
         },
         {
             "tipo": "Flats",
-            "precio": "Lps. 499.0",
+            "precio": 499,
             "marca": "American Eagle",
             "imglink": "https://i.pinimg.com/originals/23/82/63/238263931a3271a1147a50f125d0e02d.jpg",
-            "genero": "Mujer"
+            "genero": "Mujer",
+            "id": 13
         }
         
        

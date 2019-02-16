@@ -7,7 +7,13 @@ class App extends Component {
 
     constructor(props){
       super(props)
-      this.state = { base }
+      this.state = { 
+        base,
+        openOrder: false,
+        total: 0,
+        sum: 0 
+      }
+
 
     }
 
