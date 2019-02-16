@@ -37,6 +37,7 @@ class ListaCarrito extends Component {
             name={p.marca}
             total={this.numberFormat(p.total)}
             order={p.order}
+            HOLA MUNDOQq
           />
           )
         })}

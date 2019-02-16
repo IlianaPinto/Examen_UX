@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Image, Label, Button } from 'semantic-ui-react';
 import Formato from './Formato';
+
 function Producto(props) {
     return(
       <Card style={{ marginTop: 15 }}>
