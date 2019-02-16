@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { base } from './base.json';
+import { Card, Statistic, Button } from 'semantic-ui-react'
 
 class Hombre extends Component {
 
@@ -13,10 +14,8 @@ class Hombre extends Component {
   render() {
     const base = this.state.base.map((base,i) => {
       return (
-        <div className="col-md-4">
-        {base.genero==="Hombre" ? 
-          <div className = "card mt-4">
-            <div className="card-body">        
+        <Card>        
+        {base.genero==="Hombre" ?        
               <p>
                 <img src = {base.imglink} width="200px" heigth="200px" alt="img"></img>
                 <br></br>
@@ -25,11 +24,11 @@ class Hombre extends Component {
                 {base.precio}  
                 <br></br>
                 <button>Add to Cart</button>
-              </p>             
-            </div>
-          </div>
+              </p>            
         : ""}  
-        </div>
+        
+        </Card>
+        
       )
     }) 
     return (
