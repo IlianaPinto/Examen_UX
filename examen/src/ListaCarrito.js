@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import Format from '../numberFormat'
+import Formato from './Formato'
 import { Card, Icon, Button, Grid } from 'semantic-ui-react'
 
-import Cart from '../Cart'
+import Carrito from './Carrito'
 
 class ListaCarrito extends Component {
   constructor(props) {
@@ -31,7 +31,7 @@ class ListaCarrito extends Component {
         <Card.Content>
         {this.props.items.map(p => {
           return (
-          <Cart
+          <Carrito
             key={p.id}
             img={p.imglink}
             name={p.marca}

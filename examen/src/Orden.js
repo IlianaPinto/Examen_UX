@@ -1,5 +1,5 @@
 import React from 'react'
-import Format from '../numberFormat'
+import Format from './Formato'
 import { Card, Statistic, Button } from 'semantic-ui-react'
 
 function Orden(props) {

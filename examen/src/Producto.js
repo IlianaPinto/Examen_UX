@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Image, Label, Button } from 'semantic-ui-react';
-
+import Formato from './Formato';
 function Producto(props) {
     return(
       <Card style={{ marginTop: 15 }}>
@@ -8,7 +8,7 @@ function Producto(props) {
         <Card.Content>
           <Card.Header style={{fontSize: 15}}>{props.marca}</Card.Header>
           <Card.Meta>
-            <Format number={props.precio}/>
+            <Formato number={props.precio}/>
           </Card.Meta>
           <Card.Description>
             <Label>{props.marca}</Label>
