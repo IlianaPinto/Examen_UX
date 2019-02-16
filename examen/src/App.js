@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import NewTux from './NewTux.svg';
 import './App.css';
 import { base } from './base.json';
 import Mujer from './Mujer';
@@ -8,7 +6,8 @@ import Hombre from './Hombre';
 import Kids from './Kids';
 import Home from './Home';
 import Search from './Search';
-import {Link, Switch, Route, Redirect} from 'react-router-dom';
+import logo from './logo.jpeg';
+import { Switch, Route, Redirect} from 'react-router-dom';
 
 class App extends Component {
 
@@ -23,7 +22,7 @@ class App extends Component {
       <div className = "App">
       <nav class="navbar navbar-expand-sm bg-ligth navbar-dark">
         <ul class="navbar-nav ml-auto">
-          <a class="nav-link py-0" href=""> Log In</a>
+          <a class="nav-link py-0" href="facebook.com"> Log In</a>
         </ul>
       
       </nav>
@@ -46,7 +45,7 @@ class App extends Component {
             <ul class="navbar-nav ml-auto">
               <form class="form-inline" action="/action_page.php">
                 <input class="form-control mr-sm-2" type="text" placeholder="Search" />
-                <button class="btn btn-success" type="submit">Search</button>
+                <button class="btn btn-success" type="submit" href="/Search">Search</button>
               </form>
             </ul> 
           </nav>

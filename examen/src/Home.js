@@ -3,6 +3,7 @@ import {base} from './base.json';
 import Carousel from './Carousel';
 import './App.css';
 
+
 class Home extends Component{
     constructor(props){
       super(props)
@@ -12,11 +13,8 @@ class Home extends Component{
 
   render() { 
     return ( 
-      <div>
+      <div>     
         <Carousel></Carousel>
-        <div className="card-body">
-          <img src=""></img>
-        </div>
       </div>
 
     );

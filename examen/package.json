@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "mdbreact": "^4.10.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-responsive-carousel": "^3.1.47",
@@ -23,5 +24,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "react-alice-carousel": "^1.13.1"
+  }
 }
