@@ -1,60 +1,56 @@
-import React, { Component } from 'react';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
-import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer } from
-"mdbreact";
+import React from 'react';
+import AliceCarousel from 'react-alice-carousel';
+import "react-alice-carousel/lib/alice-carousel.css";
  
-class DemoCarousel extends Component {
-    render() {
-        return (
-            <MDBContainer>
-                <MDBCarousel activeItem={1} length={4} showControls={true} showIndicators={true} className="z-depth-1">
-                  <MDBCarouselInner>
-                    <MDBCarouselItem itemId="1">
-                      <MDBView>
-                        <img className="d-block w-100" src="http://www.andreavilallonga.com/atelier/wp-content/uploads/image45.jpg" alt="First slide" />
-                        <MDBMask overlay="black-light" />
-                      </MDBView>
-                      <MDBCarouselCaption>
-                        <h3 className="h3-responsive">Light mask</h3>
-                        <p>First text</p>
-                      </MDBCarouselCaption>
-                    </MDBCarouselItem>
-                    <MDBCarouselItem itemId="2">
-                      <MDBView>
-                        <img className="d-block w-100" src="https://www.relevant.ninja/wp-content/uploads/2014/10/alpe-ariadne-artiles-look-6.jpg" alt="Second slide" />
-                        <MDBMask overlay="black-strong" />
-                      </MDBView>
-                      <MDBCarouselCaption>
-                        <h3 className="h3-responsive">Strong mask</h3>
-                        <p>Second text</p>
-                      </MDBCarouselCaption>
-                    </MDBCarouselItem>
-                    <MDBCarouselItem itemId="3">
-                      <MDBView>
-                        <img className="d-block w-100" src="http://todofondos.com/bin/fondos/07/50/65d.jpg" alt="Third slide" />
-                        <MDBMask overlay="black-slight" />
-                      </MDBView>
-                      <MDBCarouselCaption>
-                        <h3 className="h3-responsive">Slight mask</h3>
-                        <p>Third text</p>
-                      </MDBCarouselCaption>
-                    </MDBCarouselItem>
-                    <MDBCarouselItem itemId="4">
-                      <MDBView>
-                        <img className="d-block w-100" src="https://www.edicionessibila.com/eniusimg/cache/enius199/2016/06/adj-576d5149b3a14-753019-1024-800.jpg" alt="Mattonit's item" />
-                        <MDBMask overlay="black-light" />
-                      </MDBView>
-                      <MDBCarouselCaption>
-                        <h3 className="h3-responsive">Sopot Beach</h3>
-                        <p>Taken june 21th by @mattonit</p>
-                      </MDBCarouselCaption>
-                    </MDBCarouselItem>
-                  </MDBCarouselInner>
-                </MDBCarousel>
-              </MDBContainer>
-        );
-    }
-};
-export default DemoCarousel;
+class Gallery extends React.Component {  
+  responsive = {
+    0: { items: 1 },
+    600: { items: 2 },
+    1024: { items: 3 },
+  };
+  
+  onSlideChange(e) {
+    console.log('Item`s position during a change: ', e.item);
+    console.log('Slide`s position during a change: ', e.slide);
+  };
+ 
+  onSlideChanged(e) {
+    console.log('Item`s position after changes: ', e.item);
+    console.log('Slide`s position after changes: ', e.slide);
+  };
+  
+  galleryItems() {
+    return (
+      [<img src="https://insightradionetwork.com/11278-1-large_default/Nuevo-2018-wwomen-zapatos-moda-mujeres-bombas-sexy-punta-estrecha-tacones-altos-partido-zapatos-mujer-tama%C3%B1o-grande-34-43.jpg" width="100px" height="100px"></img>, 
+      <img src="http://www.serviciosintegralesseven.com/image/cache/data/category_3/comprar-sandalia-tacon-bajo-en-piel-blanco-formal-mujer-zapatos-2019-pqratbj-308-400x400_0.jpg" width="100px" height="100px"></img>, 
+      <img src="http://www.handsaway.es/images/image/Mujer/Zapatos%20de%20tac%C3%B3n/2018%202019%20Zapatos%20Zapatos%20de%20moda%20Zapatos%20de%20Tac%20n%20BEIGE%20MEGIS%20ELEGANT%20-%20Primavera%20Verano%20Zapatos%20para%20Mujer%20Calzado%20de%20Mujer%20genuino%20-%20AFuUOisTvCic.jpg" width="100px" height="100px"></img>, 
+      <img src="http://es.piccadilly.com.br/uploads/collection/PV1819/categories/1534357565-categoria-sapato.jpg  " width="100px" height="100px"></img>, 
+      <img src="https://http2.mlstatic.com/sandalias-mujer-zapatos-moda-verano-2019-art-702-gamuza-D_NQ_NP_697185-MLA28515716443_102018-F.jpg" width="100px" height="100px"></img>].map((item, i) => (
+        <div key={`key-${i}`} className="yours-custom-class"><h2>{item}</h2></div>
+      ))
+    )
+  };
+  
+  render() {
+    const items = this.galleryItems();
+ 
+    return (
+      <AliceCarousel
+        items={items}
+        duration={400}
+        autoPlay={true}
+        startIndex = {1}
+        fadeOutAnimation={true}
+        mouseDragEnabled={true}
+        autoPlayInterval={2000}
+        autoPlayDirection="rtl"
+        responsive={this.responsive}
+        onSlideChange={this.onSlideChange}
+        onSlideChanged={this.onSlideChanged}
+      />
+    );
+  }
+}
+
+export default Gallery;
  

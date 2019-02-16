@@ -20,12 +20,44 @@ class App extends Component {
   render() {
     return (
       <div className = "App">
-      <nav class="navbar navbar-expand-sm bg-ligth navbar-dark">
-        <ul class="navbar-nav ml-auto">
-          <a class="nav-link py-0" href="facebook.com"> Log In</a>
-        </ul>
-      
+        <nav class="navbar navbar-expand-md navbar-dark bg-dar">
+          <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Left</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="//codeply.com">Codeply</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+          </div>
+          <div class="mx-auto order-0">
+              <a class="navbar-brand mx-auto" href="/Home">Happy Feet</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+          </div>
+          <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#"><img src="https://pngimage.net/wp-content/uploads/2018/06/logo-login-png-6.png" width="20px" height="20px"></img></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#"><img src="https://www.twitgram.com.ng/plugins/store/images/store.png" width="20px" height="20px"></img></a>
+                  </li>
+              </ul>
+          </div>
       </nav>
+
         <div className="component">           
           <nav class="navbar navbar-expand-sm bg-light navbar-light"> 
           <ul class="navbar-nav">
