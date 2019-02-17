@@ -49,6 +49,9 @@ class Navbar extends Component {
               <MDBNavLink to="/Kids">Kids</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
+              <MDBNavLink to="/Search">Search</MDBNavLink>
+            </MDBNavItem>
+            <MDBNavItem>
             </MDBNavItem>
           </MDBNavbarNav>
           <MDBNavbarNav right>
@@ -56,6 +59,7 @@ class Navbar extends Component {
               <MDBFormInline waves>
                 <div className="md-form my-0">
                   <input className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" />
+                  <img src="https://pngimage.net/wp-content/uploads/2018/06/shopping-bag-logo-png-2.png" width="30px" height="30px"></img>
                 </div>
               </MDBFormInline>
             </MDBNavItem>
@@ -69,7 +73,8 @@ class Navbar extends Component {
           <Route path="/Hombre" component={Hombre}/>
           <Route path="/Kids" component={Kids}/>
           <Route path="/Search" component={Search}/>
-          <Redirect to = "/"></Redirect>
+          <Route path="/" component={Home}></Route>
+          <Redirect to = "/" component={Home}></Redirect>
         </Switch>
       </div>
     );

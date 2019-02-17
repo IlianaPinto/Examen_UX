@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {base} from './base.json';
 import Carousel from './Carousel';
+import Carouselp from './Carousep';
 import './App.css';
 
 
@@ -14,9 +15,10 @@ class Home extends Component{
   render() { 
     return ( 
       <div>   
-        <img className="d-block w-100" src="http://www.andreavilallonga.com/atelier/wp-content/uploads/image45.jpg" alt="First slide" />  
+        <Carouselp></Carouselp>  
         <nav><h1>NEW ARRIVALS</h1></nav>
         <Carousel></Carousel>
+        
       </div>
 
     );
