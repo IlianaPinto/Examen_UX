@@ -6,43 +6,62 @@ import Hombre from './Hombre';
 import Kids from './Kids';
 import Home from './Home';
 import Search from './Search';
-import logo from './logo.jpeg';
 import { Switch, Route, Redirect} from 'react-router-dom';
+import {
+  MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBFormInline,
+  MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem
+  } from "mdbreact";
 
 class Navbar extends Component {
 
-    constructor(props){
-      super(props)
-      this.state = { base }
-
+  constructor(props){
+    super(props)
+    this.state = { 
+      base,
+      isOpen: false 
     }
+  }
+
+  toggleCollapse = () => {
+    this.setState({ isOpen: !this.state.isOpen });
+  }
 
   render() {
     return (
-      <div className = "App">       
-        <div className="component">           
-          <nav class="navbar navbar-expand-sm bg-light navbar-light"> 
-          <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href = "/Home">Home</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="/Mujer"> Women</a>                              
-                </li>            
-                <li class="nav-item active">
-                  <a class="nav-link" href="/Hombre">Men</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="/Kids">Kids</a>
-                </li>
-              </ul>   
-            <ul class="navbar-nav ml-auto">
-              <form class="form-inline" action="/action_page.php">
-                
-              </form>
-            </ul> 
-          </nav>
-        </div>
+      <div className = "App">
+          <MDBNavbar color="indigo" dark expand="md">
+        <MDBNavbarBrand>
+          <strong className="white-text">Le Scarpe</strong>
+        </MDBNavbarBrand>
+        <MDBNavbarToggler onClick={this.toggleCollapse} />
+        <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
+          <MDBNavbarNav left>
+            <MDBNavItem>
+              <MDBNavLink to="/Home">Home</MDBNavLink>
+            </MDBNavItem>
+            <MDBNavItem>
+              <MDBNavLink to="/Mujer">Women</MDBNavLink>
+            </MDBNavItem>
+            <MDBNavItem>
+              <MDBNavLink to="/Hombre">Men</MDBNavLink>
+            </MDBNavItem>
+            <MDBNavItem>
+              <MDBNavLink to="/Kids">Kids</MDBNavLink>
+            </MDBNavItem>
+            <MDBNavItem>
+            </MDBNavItem>
+          </MDBNavbarNav>
+          <MDBNavbarNav right>
+            <MDBNavItem>
+              <MDBFormInline waves>
+                <div className="md-form my-0">
+                  <input className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" />
+                </div>
+              </MDBFormInline>
+            </MDBNavItem>
+          </MDBNavbarNav>
+        </MDBCollapse>
+      </MDBNavbar>
 
         <Switch>
           <Route path="/Home" component={Home}/>

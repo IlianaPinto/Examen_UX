@@ -3,11 +3,7 @@ import './App.css';
 import { base } from './base.json';
 import Navbar from './Navbar';
 import Orden from './Orden';
-import { Container, Grid, Header } from 'semantic-ui-react'
-import Menu from './Menu'
-import ListaProducto from './ListaProducto'
-import ListaCarrito from './ListaCarrito'
-import Search from './Search';
+
 class App extends Component {
 
     constructor(props){
@@ -17,13 +13,14 @@ class App extends Component {
         openOrder: false,
         total: 0,
         sum: 0,
-        cart: []
+        cart: [],
+        isOpen:false
       }
       this.handleSaveProduct = this.handleSaveProduct.bind(this)
-    this.handlerAddProduct = this.handlerAddProduct.bind(this)
-    this.handlerRemoveProduct = this.handlerRemoveProduct.bind(this)
-    this.handlerOpenOrder = this.handlerOpenOrder.bind(this)
-    this.handlerClearCart = this.handlerClearCart.bind(this)
+      this.handlerAddProduct = this.handlerAddProduct.bind(this)
+      this.handlerRemoveProduct = this.handlerRemoveProduct.bind(this)
+      this.handlerOpenOrder = this.handlerOpenOrder.bind(this)
+      this.handlerClearCart = this.handlerClearCart.bind(this)
     }
 
     handlerClearCart() {
