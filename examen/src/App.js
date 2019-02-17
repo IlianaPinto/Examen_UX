@@ -7,7 +7,7 @@ import { Container, Grid, Header } from 'semantic-ui-react'
 import Menu from './Menu'
 import ListaProducto from './ListaProducto'
 import ListaCarrito from './ListaCarrito'
-import estilo from './estilo.css';
+import Search from './Search';
 class App extends Component {
 
     constructor(props){
@@ -130,27 +130,6 @@ class App extends Component {
     return (
       <div className = "App">
         <Navbar></Navbar>
-        <Container className={estilo.root}>
-        <Menu/>
-        <Grid>
-          <Grid.Column width={12}>
-            <ListaProducto
-              products={this.state.products}
-              onSaveProduct={this.handleSaveProduct}
-              onIncrementProduct={this.handleSaveProduct}
-              onRemoveProduct={this.handlerRemoveProduct}
-            />
-          </Grid.Column>
-          <Grid.Column width={4}>
-            <ListaCarrito
-              items={this.state.cart}
-              total={this.state.total}
-              onOpenOrder={this.handlerOpenOrder}
-            />
-            {this.renderOpenOrder()}
-          </Grid.Column>
-        </Grid>
-      </Container>
       </div>
     );
   }

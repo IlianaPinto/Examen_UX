@@ -17,15 +17,7 @@ function Producto(props) {
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
-          <Button
-            basic
-            compact
-            color='blue'
-            floated='right'
-            onClick={props.onSaveProduct}
-          >
-            Agregar al carrito
-          </Button>
+          <Button basic compact color='blue' floated='right' onClick={props.onSaveProduct} > Agregar al carrito </Button>
         </Card.Content>
         <Card.Content extra>
           <Button.Group floated='right'>
