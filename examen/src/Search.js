@@ -32,32 +32,32 @@ class Search extends Component{
             </form>
             {base.filter(searchingfor(buscar)).map(base =>   
                 <div key={base.id}>
-                <div className="container">
-                    <div className="row mt-4">
-                    <div className = "card mt-4">
-              <div className="card-body">        
-                <img src={base.imglink}  width="200px" height="200px"/>
-                <Card.Content>
-                  <Card.Header style={{fontSize: 15}}>{base.tipo}</Card.Header>
-                  <Card.Meta>
-                    <Formato number={base.precio}/>
-                  </Card.Meta>
-                  <Card.Description>
-                    <br></br>
-                    <Label>{base.marca}</Label>
-                    <Label>{base.status} in stock</Label>
-                  </Card.Description>
-                </Card.Content>
-                <br></br>
-                <Card.Content extra>
-                  <Button basic compact color='blue' floated='middle' onClick={this.onSaveProduct} > Add to car </Button>
-                </Card.Content>       
-              </div>
-            </div>
-                    </div>
-                </div>
-                    
-                    
+                    <div className="container">
+                    <div className="col-md-4">
+                        <div className="row mt-4">
+                            <div className = "card mt-4">
+                                <div className="card-body">        
+                                    <img src={base.imglink}  width="200px" height="200px"/>
+                                    <Card.Content>
+                                    <Card.Header style={{fontSize: 15}}>{base.tipo}</Card.Header>
+                                    <Card.Meta>
+                                        <Formato number={base.precio}/>
+                                    </Card.Meta>
+                                    <Card.Description>
+                                        <br></br>
+                                        <Label>{base.marca}</Label>
+                                        <Label>{base.status} in stock</Label>
+                                    </Card.Description>
+                                    </Card.Content>
+                                    <br></br>
+                                    <Card.Content extra>
+                                    <Button basic compact color='blue' floated='middle' onClick={this.onSaveProduct} > Add to car </Button>
+                                    </Card.Content>       
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>          
                 </div>
             )
             }    
