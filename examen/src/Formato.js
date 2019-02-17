@@ -17,7 +17,7 @@ function Format(props) {
   }
 
     return(
-      <p> $ {numberFormat(props.number)}</p>
+      <p> Lps. {numberFormat(props.number)}</p>
     )
 
 }

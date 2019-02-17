@@ -130,7 +130,7 @@ class Hombre extends Component {
               <div className="card-body">        
                 <img src={base.imglink}  width="200px" height="200px"/>
                 <Card.Content>
-                  <Card.Header style={{fontSize: 15}}>{base.marca}</Card.Header>
+                  <Card.Header style={{fontSize: 15}}>{base.tipo}</Card.Header>
                   <Card.Meta>
                     <Formato number={base.precio}/>
                   </Card.Meta>
@@ -142,11 +142,11 @@ class Hombre extends Component {
                 </Card.Content>
                 <br></br>
                 <Card.Content extra>
-                  <Button basic compact color='blue' floated='middle' onClick={this.onSaveProduct} > Agregar al carrito </Button>
+                  <Button basic compact color='blue' floated='middle' onClick={this.onSaveProduct} > Add to car </Button>
                 </Card.Content>       
               </div>
             </div>
-          : ""}  
+          : null}  
           </div>
         )
       }) 

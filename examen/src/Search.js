@@ -30,7 +30,7 @@ class Search extends Component{
             </form>
             {base.filter(searchingfor(term)).map(base =>   
                 <div key={base.id}>
-                    <p>{base.marca}</p>
+                    
                 </div>
                 )
             }    
