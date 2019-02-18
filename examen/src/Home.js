@@ -16,7 +16,6 @@ class Home extends Component{
     return ( 
       <div>   
         <Carouselp></Carouselp>  
-        <img src={producto} width="1300x"></img>
         <nav><h1>NEW ARRIVALS</h1></nav>
         <Carousel></Carousel>
         
