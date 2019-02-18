@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { base } from './base.json';
 import Navbar from './Navbar';
+import logo from './logo.jpeg'
 
 class App extends Component {
 
@@ -15,6 +16,9 @@ class App extends Component {
   render() {
     return (
       <div className = "App">
+        <nav>
+          <img src={logo} width="200px" height="50px"></img>
+          </nav>
         <Navbar></Navbar>
       </div>
     );

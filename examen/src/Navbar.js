@@ -6,7 +6,7 @@ import Hombre from './Hombre';
 import Kids from './Kids';
 import Home from './Home';
 import Search from './Search';
-import Span from './Span'
+import logo from './logo.jpeg'
 import { Switch, Route, Redirect} from 'react-router-dom';
 import {
   MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBFormInline,
@@ -32,7 +32,8 @@ class Navbar extends Component {
       <div className = "App">
           <MDBNavbar color="indigo" dark expand="md">
         <MDBNavbarBrand>
-          <strong className="white-text">Le Scarpe</strong>
+          
+          <strong className="white-text"></strong>
         </MDBNavbarBrand>
         <MDBNavbarToggler onClick={this.toggleCollapse} />
         <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
@@ -60,7 +61,6 @@ class Navbar extends Component {
               <MDBFormInline waves>
                 <div className="md-form my-0">
                   <input className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" />
-                  <Span></Span>
                   <img src="https://pngimage.net/wp-content/uploads/2018/06/shopping-bag-logo-png-2.png" width="30px" height="30px"></img>
                 </div>
               </MDBFormInline>

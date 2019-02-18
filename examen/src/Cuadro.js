@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Formato from './Formato'
 import { Card, Label, Button, Image } from 'semantic-ui-react'
-import Span from './Span'
 
 class Cuadro extends Component{
     constructor(props){
@@ -10,12 +9,6 @@ class Cuadro extends Component{
             contador: this.props.precio
         }
     }
-
-    cambiar(nuevoPrecio){
-        this.setState({
-            contador: nuevoPrecio
-        });
-    } 
 
     render(){
         return(
