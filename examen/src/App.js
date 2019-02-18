@@ -17,6 +17,7 @@ class App extends Component {
     return (
       <div className = "App">
         <nav>
+          <img src={logo} width="200px" height="50px"></img>
           </nav>
         <Navbar></Navbar>
       </div>

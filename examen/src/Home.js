@@ -3,7 +3,7 @@ import {base} from './base.json';
 import Carousel from './Carousel';
 import Carouselp from './Carousep';
 import './App.css';
-import producto from './producto.jpeg'
+
 
 class Home extends Component{
     constructor(props){
