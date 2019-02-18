@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 import Formato from './Formato'
 import { Card, Label, Button, Image } from 'semantic-ui-react'
+import Span from './Span'
 
 class Cuadro extends Component{
-
-    handleSubmit = (event) =>{
-        event.preventDefault();
-        alert(this.props.precio);
+    constructor(props){
+        super(props)
+        this.state={
+            contador: this.props.precio
+        }
     }
+
+    cambiar(nuevoPrecio){
+        this.setState({
+            contador: nuevoPrecio
+        });
+    } 
 
     render(){
         return(
@@ -28,7 +36,7 @@ class Cuadro extends Component{
                         </Card.Content>
                         <br></br>
                         <Card.Content extra>
-                        <Button basic compact color='blue' floated='middle' onClick={this.handleSubmit} > Add to car </Button>
+                        <Button basic compact color='blue' floated='middle' onClick={this.handleSubmit} > Add to car </Button>       
                         </Card.Content>       
                     </div>
                 </div>  
