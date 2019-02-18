@@ -31,8 +31,7 @@ class Navbar extends Component {
     return (
       <div className = "App">
           <MDBNavbar color="indigo" dark expand="md">
-        <MDBNavbarBrand>
-          
+        <MDBNavbarBrand>         
           <strong className="white-text"></strong>
         </MDBNavbarBrand>
         <MDBNavbarToggler onClick={this.toggleCollapse} />
@@ -60,8 +59,8 @@ class Navbar extends Component {
             <MDBNavItem>
               <MDBFormInline waves>
                 <div className="md-form my-0">
-                  <input className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" />
-                  <img src="https://pngimage.net/wp-content/uploads/2018/06/shopping-bag-logo-png-2.png" width="30px" height="30px"></img>
+                  <span className="badge badge-pill badge-light ml-2">Lps. 0 </span>
+                  <img src="https://pngimage.net/wp-content/uploads/2018/06/shopping-bag-logo-png-2.png" width="30px" height="30px"></img>                  
                 </div>
               </MDBFormInline>
             </MDBNavItem>

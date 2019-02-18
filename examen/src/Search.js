@@ -28,7 +28,12 @@ class Search extends Component{
         return(
         <div>
             <form>
-                <input type="text" onChange={this.searchHandler} value={buscar} name='buscar'></input>
+                <div className="component">
+                <br></br>
+                <input type="text" placeholder="Search" aria-label="Search" type="text" onChange={this.searchHandler} value={buscar} name='buscar'/>
+                
+                </div>
+                    
             </form>
             {base.filter(searchingfor(buscar)).map(base =>   
                 <div key={base.id}>

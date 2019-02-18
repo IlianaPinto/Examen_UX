@@ -10,6 +10,11 @@ class Cuadro extends Component{
         }
     }
 
+    handleSubmit = (event) =>{
+        event.preventDefault();
+        alert("La cantidad total a pagar es de: Lps. "+this.props.precio);
+    }
+
     render(){
         return(
             <form onSubmit={this.handleSubmit}>

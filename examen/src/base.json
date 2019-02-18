@@ -234,6 +234,15 @@
             "genero": "Mujer",
             "id": 26
         }
+        ,
+        {
+            "tipo": "Sneakers",
+            "precio": 1699.0,
+            "marca": "Vans",
+            "imglink": "https://www.zapatos.es/media/catalog/product/cache/image/650x650//0/0/0000197850310-vans-old_skool_d3hy28_black_white-ap-001.jpg",
+            "genero": "Mujer",
+            "id": 27
+        }
         
        
     ]
