@@ -16,11 +16,13 @@ class Kids extends Component {
     render() {
       const base = this.state.base.map((base,i) => {
         return (
-          <div className="col-md-4">
-          {base.genero==="Kids" ?         
+          
+          base.genero==="Kids" ?    
+          <div className="col-md-4">     
             <Cuadro precio={base.precio} tipo={base.tipo} marca={base.marca} imglink={base.imglink}></Cuadro>
-          : null}  
           </div>
+            : null 
+          
         )
       }) 
       return (

@@ -16,11 +16,13 @@ class Mujer extends Component {
     render() {
       const base = this.state.base.map((base,i) => {
         return (
+          
+          base.genero==="Mujer" ? 
           <div className="col-md-4">
-          {base.genero==="Mujer" ? 
             <Cuadro precio={base.precio} tipo={base.tipo} marca={base.marca} imglink={base.imglink}></Cuadro>
-          : null}  
           </div>
+            : null
+          
         )
       }) 
       return (

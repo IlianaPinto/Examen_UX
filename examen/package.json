@@ -3,13 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "firebase": "^5.8.6",
+    "firebaseui": "^3.5.2",
     "mdbreact": "^4.10.0",
+    "node-sass": "^4.11.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-items-carousel": "^2.3.0",
+    "react-redux": "^6.0.1",
     "react-responsive-carousel": "^3.1.47",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.5"
+    "react-scripts": "2.1.5",
+    "reactstrap": "^7.1.0",
+    "redux": "^4.0.1",
+    "sass-loader": "^7.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -27,6 +34,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "flow-bin": "^0.94.0",
     "react-alice-carousel": "^1.13.1"
   }
 }

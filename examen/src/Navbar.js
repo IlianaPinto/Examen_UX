@@ -8,65 +8,47 @@ import Home from './Home';
 import Search from './Search';
 import logo from './logo.jpeg'
 import { Switch, Route, Redirect} from 'react-router-dom';
-import {
-  MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBFormInline,
-  MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem
-  } from "mdbreact";
+import {Collapse, Navbar,NavbarToggler, NavbarBrand, Nav,NavItem,NavLink,} from 'reactstrap';
 
-class Navbar extends Component {
+class Header extends Component {
 
-  constructor(props){
-    super(props)
-    this.state = { 
-      base,
-      isOpen: false 
-    }
+  constructor(props) {
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      isOpen: false
+    };
   }
-
-  toggleCollapse = () => {
-    this.setState({ isOpen: !this.state.isOpen });
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
   }
 
   render() {
     return (
       <div className = "App">
-          <MDBNavbar color="indigo" dark expand="md">
-        <MDBNavbarBrand>         
-          <strong className="white-text"></strong>
-        </MDBNavbarBrand>
-        <MDBNavbarToggler onClick={this.toggleCollapse} />
-        <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
-          <MDBNavbarNav left>
-            <MDBNavItem>
-              <MDBNavLink to="/Home">Home</MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink to="/Mujer">Women</MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink to="/Hombre">Men</MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink to="/Kids">Kids</MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink to="/Search">Search</MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-            </MDBNavItem>
-          </MDBNavbarNav>
-          <MDBNavbarNav right>
-            <MDBNavItem>
-              <MDBFormInline waves>
-                <div className="md-form my-0">
-                  <span className="badge badge-pill badge-light ml-2">Lps. 0 </span>
-                  <img src="https://pngimage.net/wp-content/uploads/2018/06/shopping-bag-logo-png-2.png" width="30px" height="30px"></img>                  
-                </div>
-              </MDBFormInline>
-            </MDBNavItem>
-          </MDBNavbarNav>
-        </MDBCollapse>
-      </MDBNavbar>
+          <Navbar color="dar" dark expand="md">
+            <NavbarBrand href="/Home"><img src={logo} width="200px" height="50px"></img></NavbarBrand>
+              <NavbarToggler onClick={this.toggle} />
+                <Collapse isOpen={this.state.isOpen} navbar>
+                  <Nav className="ml-auto" navbar>
+                    <NavItem>
+                      <NavLink active href="/Mujer">Women</NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink active href="/Hombre">Men</NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink active href="/Kids">Kids</NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink active href="/Search">Search</NavLink>
+                    </NavItem>
+                  </Nav>
+                </Collapse>
+         </Navbar>
 
         <Switch>
           <Route path="/Home" component={Home}/>
@@ -82,42 +64,4 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar;
-
-/*<nav class="navbar navbar-expand-md navbar-dark bg-dar">
-          <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Left</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="//codeply.com">Codeply</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-            </ul>
-          </div>
-          <div class="mx-auto order-0">
-              <a class="navbar-brand mx-auto" href="/Home">Le Scarpe</a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-          </div>
-          <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-              <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                      <a class="nav-link" href="#"><img src="https://pngimage.net/wp-content/uploads/2018/06/logo-login-png-6.png" width="20px" height="20px"></img></a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#"><img src="https://www.twitgram.com.ng/plugins/store/images/store.png" width="20px" height="20px"></img></a>
-                  </li>
-              </ul>
-          </div>
-      </nav>*/
+export default Header;
