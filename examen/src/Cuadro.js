@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
 import Formato from './Formato'
-import { Card, Label, Button, Image } from 'semantic-ui-react'
+import { Card, Label, Button} from 'semantic-ui-react'
+import firebase from "firebase"
 
 class Cuadro extends Component{
     constructor(props){
         super(props)
         this.state={
-            contador: this.props.precio
+            login: false
         }
     }
 
     handleSubmit = (event) =>{
         event.preventDefault();
-        alert("La cantidad total a pagar es de: Lps. "+this.props.precio);
+        firebase.auth().onAuthStateChanged(user => {
+            this.setState({ login: !!user })
+            if(user == null){
+                alert("You are not log in");
+            }else{
+                alert("La cantidad total a pagar es de: Lps. "+this.props.precio);
+            }
+        })     
     }
 
     render(){

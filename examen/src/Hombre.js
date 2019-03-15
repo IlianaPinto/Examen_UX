@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import { base } from './base.json';
-import { Card, Label, Button, Image } from 'semantic-ui-react'
 import Cuadro from './Cuadro'
 
 class Hombre extends Component {

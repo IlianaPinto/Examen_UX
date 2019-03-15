@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {base} from './base.json';
 import Carouselp from './Carousep';
 import './App.css';
-import Alerta from './alerta'
 
 class Home extends Component{
     constructor(props){
@@ -15,7 +14,6 @@ class Home extends Component{
     return ( 
       <div>   
         <Carouselp></Carouselp>
-        <Alerta></Alerta>
       </div>
 
     );

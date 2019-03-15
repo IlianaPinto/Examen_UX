@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import { base } from './base.json';
 import Mujer from './Mujer';
 import Hombre from './Hombre';
 import Kids from './Kids';
@@ -8,7 +7,8 @@ import Home from './Home';
 import Search from './Search';
 import logo from './logo.jpeg'
 import { Switch, Route, Redirect} from 'react-router-dom';
-import {Collapse, Navbar,NavbarToggler, NavbarBrand, Nav,NavItem,NavLink,} from 'reactstrap';
+import {Collapse, Navbar,NavbarToggler, NavbarBrand, Nav,NavItem,NavLink,Button} from 'reactstrap';
+import firebase from "firebase"
 
 class Header extends Component {
 
@@ -17,13 +17,21 @@ class Header extends Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
+      isSignedIn: false
     };
   }
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
     });
+  }
+
+  componentDidMount = () => {
+    firebase.auth().onAuthStateChanged(user => {
+      this.setState({ isSignedIn: !!user })
+      console.log("user", user)
+    })
   }
 
   render() {
@@ -46,6 +54,11 @@ class Header extends Component {
                     <NavItem>
                       <NavLink active href="/Search">Search</NavLink>
                     </NavItem>
+                    {this.state.isSignedIn?
+                      <NavItem>
+                        <Button onClick={() => firebase.auth().signOut()}>Sign out!</Button>
+                      </NavItem>   
+                      :""}
                   </Nav>
                 </Collapse>
          </Navbar>
