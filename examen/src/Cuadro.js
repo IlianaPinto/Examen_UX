@@ -11,8 +11,8 @@ class Cuadro extends Component{
         }
     }
 
-    handleSubmit = (event) =>{
-        event.preventDefault();
+    handleSubmit = () =>{
+        
         firebase.auth().onAuthStateChanged(user => {
             this.setState({ login: !!user })
             if(user == null){
@@ -25,7 +25,7 @@ class Cuadro extends Component{
 
     render(){
         return(
-            <form onSubmit={this.handleSubmit}>
+            <form>
                 <div className = "card mt-4">
                     <div className="card-body">        
                         <img src={this.props.imglink}  width="200px" height="200px"/>

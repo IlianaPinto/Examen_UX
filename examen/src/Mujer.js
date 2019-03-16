@@ -33,7 +33,6 @@ class Mujer extends Component {
       }) 
       return (
         <div>
-        {this.state.login? "":<Login></Login>}
           <div className="container">    
               <div className="row mt-4">
                   {base}

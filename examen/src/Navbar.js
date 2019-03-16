@@ -7,8 +7,9 @@ import Home from './Home';
 import Search from './Search';
 import logo from './logo.jpeg'
 import { Switch, Route, Redirect} from 'react-router-dom';
-import {Collapse, Navbar,NavbarToggler, NavbarBrand, Nav,NavItem,NavLink,Button} from 'reactstrap';
+import {Collapse, Navbar,NavbarToggler, NavbarBrand, Nav,NavItem,NavLink,Button,Container} from 'reactstrap';
 import firebase from "firebase"
+import Alerta from './alerta'
 
 class Header extends Component {
 
@@ -38,10 +39,20 @@ class Header extends Component {
     return (
       <div className = "App">
           <Navbar color="dar" dark expand="md">
+          <Container>
             <NavbarBrand href="/Home"><img src={logo} width="200px" height="50px"></img></NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.state.isOpen} navbar>
                   <Nav className="ml-auto" navbar>
+                  {this.state.isSignedIn?
+                      <NavItem>
+                        <Button color="link" onClick={() => firebase.auth().signOut()}>Sign out!</Button>
+                      </NavItem>   
+                      :
+                      <NavItem>
+                        <Alerta></Alerta>
+                      </NavItem> 
+                      }
                     <NavItem>
                       <NavLink active href="/Mujer">Women</NavLink>
                     </NavItem>
@@ -54,13 +65,11 @@ class Header extends Component {
                     <NavItem>
                       <NavLink active href="/Search">Search</NavLink>
                     </NavItem>
-                    {this.state.isSignedIn?
-                      <NavItem>
-                        <Button onClick={() => firebase.auth().signOut()}>Sign out!</Button>
-                      </NavItem>   
-                      :""}
+                    
                   </Nav>
                 </Collapse>
+              </Container>
+                
          </Navbar>
 
         <Switch>

@@ -32,9 +32,7 @@ class Prueba extends Component {
     return (
       <div className="App">
         {this.state.isSignedIn ? (
-          <span>
-            <Button onClick={() => firebase.auth().signOut()}>Sign out!</Button>
-          </span>
+          ""
         ) : (
           <StyledFirebaseAuth
             uiConfig={this.uiConfig}
