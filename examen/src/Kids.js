@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { base } from './base.json';
 import Cuadro from './Cuadro'
+import firebase from "firebase"
 
 class Kids extends Component {
 
@@ -10,6 +11,14 @@ class Kids extends Component {
     this.state = { 
       base
     }
+  }
+
+  componentDidMount = () => {
+    const nameRef = firebase.database().ref('base')
+    nameRef.on('value',(snapshot) => {
+      var scores = snapshot.val()
+      this.setState({base: scores})
+    })
   }
 
     render() {

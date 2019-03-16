@@ -11,8 +11,8 @@ class Cuadro extends Component{
         }
     }
 
-    handleSubmit = () =>{
-        
+    handleSubmit = (event) =>{
+        event.preventDefault()   
         firebase.auth().onAuthStateChanged(user => {
             this.setState({ login: !!user })
             if(user == null){
@@ -32,12 +32,12 @@ class Cuadro extends Component{
                         <Card.Content>
                         <Card.Header style={{fontSize: 15}}>{this.props.tipo}</Card.Header>
                         <Card.Meta>
-                            <Formato number={this.props.precio}/>
+                             Lps. {this.props.precio}
                         </Card.Meta>
                         <Card.Description>
                             <br></br>
                             <Label>{this.props.marca}</Label>
-                            <Label>{this.props.status} in stock</Label>
+                            <Label>in stock</Label>
                         </Card.Description>
                         </Card.Content>
                         <br></br>

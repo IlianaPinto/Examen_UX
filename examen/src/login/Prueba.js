@@ -2,11 +2,15 @@ import React, { Component } from "react"
 import "./App.css"
 import firebase from "firebase"
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
-import {Button} from 'reactstrap'
+
 
 firebase.initializeApp({
-  apiKey: "AIzaSyDzb_3lOgFZ1VZp5qpJzn_Cg-bmY-wElr0",
-  authDomain: "hola-mundo-7052b.firebaseapp.com"
+    apiKey: "AIzaSyDzb_3lOgFZ1VZp5qpJzn_Cg-bmY-wElr0",
+    authDomain: "hola-mundo-7052b.firebaseapp.com",
+    databaseURL: "https://hola-mundo-7052b.firebaseio.com",
+    projectId: "hola-mundo-7052b",
+    storageBucket: "hola-mundo-7052b.appspot.com",
+    messagingSenderId: "528119207716",
 })
 
 class Prueba extends Component {
