@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import { base } from './base.json';
 import Cuadro from './Cuadro'
 import firebase from "firebase"
 
@@ -9,7 +8,7 @@ class Hombre extends Component {
   constructor(props){
     super(props)
     this.state = { 
-      base
+      base: []
     }
   }
 

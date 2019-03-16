@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import { base } from './base.json';
 import Cuadro from './Cuadro'
 import firebase from "firebase"
 
@@ -9,7 +8,7 @@ class Kids extends Component {
   constructor(props){
     super(props)
     this.state = { 
-      base
+      base: []
     }
   }
 
@@ -23,8 +22,7 @@ class Kids extends Component {
 
     render() {
       const base = this.state.base.map((base,i) => {
-        return (
-          
+        return (    
           base.genero==="Kids" ?    
           <div className="col-md-4">     
             <Cuadro precio={base.precio} tipo={base.tipo} marca={base.marca} imglink={base.imglink}></Cuadro>
