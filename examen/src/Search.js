@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {base} from './base.json';
 import Cuadro from './Cuadro'
+import firebase from 'firebase'
 
 function searchingfor(buscar){
     return function(x){
@@ -21,6 +22,14 @@ class Search extends Component{
     searchHandler(event){
         this.setState({buscar: event.target.value})
     }
+
+    componentDidMount = () => {
+        const nameRef = firebase.database().ref('base')
+        nameRef.on('value',(snapshot) => {
+          var scores = snapshot.val()
+          this.setState({base: scores})
+        })
+      }
 
     render() {
         const {buscar,base} = this.state;

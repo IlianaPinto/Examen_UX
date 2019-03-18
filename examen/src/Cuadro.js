@@ -11,8 +11,8 @@ class Cuadro extends Component{
         }
     }
 
-    handleSubmit = (event) =>{
-        event.preventDefault()   
+    handleSubmit = () =>{
+          
         firebase.auth().onAuthStateChanged(user => {
             this.setState({ login: !!user })
             if(user == null){
